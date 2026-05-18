@@ -1,0 +1,100 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Correr con input.txt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["input.txt"],
+            "runtimeArgs": ["--experimental-vm-modules"],
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Correr con valido1.txt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["valido1.txt"],
+            "runtimeArgs": ["--experimental-vm-modules"],
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Correr con valido2.txt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["valido2.txt"],
+            "runtimeArgs": ["--experimental-vm-modules"],
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Correr con invalido1.txt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["invalido1.txt"],
+            "runtimeArgs": ["--experimental-vm-modules"],
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Correr con invalido2.txt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["invalido2.txt"],
+            "runtimeArgs": ["--experimental-vm-modules"],
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Árbol ANTLR4 (input.txt)",
+            "grammar": "${workspaceFolder}/Tema39568.g4",
+            "startRule": "programa",
+            "input": "${workspaceFolder}/input.txt",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Árbol ANTLR4 (valido1.txt)",
+            "grammar": "${workspaceFolder}/Tema39568.g4",
+            "startRule": "programa",
+            "input": "${workspaceFolder}/valido1.txt",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Árbol ANTLR4 (valido2.txt)",
+            "grammar": "${workspaceFolder}/Tema39568.g4",
+            "startRule": "programa",
+            "input": "${workspaceFolder}/valido2.txt",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Árbol ANTLR4 (invalido1.txt)",
+            "grammar": "${workspaceFolder}/Tema39568.g4",
+            "startRule": "programa",
+            "input": "${workspaceFolder}/invalido1.txt",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+        {
+            "type": "antlr-debug",
+            "request": "launch",
+            "name": "Árbol ANTLR4 (invalido2.txt)",
+            "grammar": "${workspaceFolder}/Tema39568.g4",
+            "startRule": "programa",
+            "input": "${workspaceFolder}/invalido2.txt",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}
