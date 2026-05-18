@@ -1,8 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-
-# Ignorar el .g4 (gramática ANTLR, detectado como Java por Linguist)
-*.g4 linguist-detectable=false
-
-# Ignorar archivos generados por ANTLR
-generated/* linguist-generated=true
