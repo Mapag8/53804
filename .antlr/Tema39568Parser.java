@@ -1,4 +1,4 @@
-// Generated from /home/mapag8/Escritorio/Compilador 53804/Tema39568.g4 by ANTLR 4.9.2
+// Generated from /home/mapag8/Escritorio/53804/Tema39568.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,8 +16,8 @@ public class Tema39568Parser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		IF=1, ELSE=2, PRINTF=3, RETURN=4, LPAREN=5, RPAREN=6, LBRACE=7, RBRACE=8, 
-		SEMI=9, CERO=10, UNO=11, CADENA=12, WS=13;
+		SI=1, SINO=2, IMPRIMIR=3, RETORNAR=4, PARENTESIS_IZQ=5, PARENTESIS_DER=6, 
+		LLAVE_IZQ=7, LLAVE_DER=8, PUNTO_COMA=9, CERO=10, UNO=11, CADENA=12, WS=13;
 	public static final int
 		RULE_programa = 0, RULE_instrucciones = 1, RULE_instruccion = 2, RULE_decision = 3, 
 		RULE_sentencia = 4, RULE_salida = 5, RULE_terminar = 6, RULE_condicion = 7;
@@ -38,8 +38,8 @@ public class Tema39568Parser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "IF", "ELSE", "PRINTF", "RETURN", "LPAREN", "RPAREN", "LBRACE", 
-			"RBRACE", "SEMI", "CERO", "UNO", "CADENA", "WS"
+			null, "SI", "SINO", "IMPRIMIR", "RETORNAR", "PARENTESIS_IZQ", "PARENTESIS_DER", 
+			"LLAVE_IZQ", "LLAVE_DER", "PUNTO_COMA", "CERO", "UNO", "CADENA", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -160,7 +160,7 @@ public class Tema39568Parser extends Parser {
 				setState(22); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==IF );
+			} while ( _la==SI );
 			}
 		}
 		catch (RecognitionException re) {
@@ -206,15 +206,15 @@ public class Tema39568Parser extends Parser {
 	}
 
 	public static class DecisionContext extends ParserRuleContext {
-		public TerminalNode IF() { return getToken(Tema39568Parser.IF, 0); }
-		public TerminalNode LPAREN() { return getToken(Tema39568Parser.LPAREN, 0); }
+		public TerminalNode SI() { return getToken(Tema39568Parser.SI, 0); }
+		public TerminalNode PARENTESIS_IZQ() { return getToken(Tema39568Parser.PARENTESIS_IZQ, 0); }
 		public CondicionContext condicion() {
 			return getRuleContext(CondicionContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(Tema39568Parser.RPAREN, 0); }
-		public List<TerminalNode> LBRACE() { return getTokens(Tema39568Parser.LBRACE); }
-		public TerminalNode LBRACE(int i) {
-			return getToken(Tema39568Parser.LBRACE, i);
+		public TerminalNode PARENTESIS_DER() { return getToken(Tema39568Parser.PARENTESIS_DER, 0); }
+		public List<TerminalNode> LLAVE_IZQ() { return getTokens(Tema39568Parser.LLAVE_IZQ); }
+		public TerminalNode LLAVE_IZQ(int i) {
+			return getToken(Tema39568Parser.LLAVE_IZQ, i);
 		}
 		public List<SentenciaContext> sentencia() {
 			return getRuleContexts(SentenciaContext.class);
@@ -222,11 +222,11 @@ public class Tema39568Parser extends Parser {
 		public SentenciaContext sentencia(int i) {
 			return getRuleContext(SentenciaContext.class,i);
 		}
-		public List<TerminalNode> RBRACE() { return getTokens(Tema39568Parser.RBRACE); }
-		public TerminalNode RBRACE(int i) {
-			return getToken(Tema39568Parser.RBRACE, i);
+		public List<TerminalNode> LLAVE_DER() { return getTokens(Tema39568Parser.LLAVE_DER); }
+		public TerminalNode LLAVE_DER(int i) {
+			return getToken(Tema39568Parser.LLAVE_DER, i);
 		}
-		public TerminalNode ELSE() { return getToken(Tema39568Parser.ELSE, 0); }
+		public TerminalNode SINO() { return getToken(Tema39568Parser.SINO, 0); }
 		public DecisionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -241,32 +241,32 @@ public class Tema39568Parser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(26);
-			match(IF);
+			match(SI);
 			setState(27);
-			match(LPAREN);
+			match(PARENTESIS_IZQ);
 			setState(28);
 			condicion();
 			setState(29);
-			match(RPAREN);
+			match(PARENTESIS_DER);
 			setState(30);
-			match(LBRACE);
+			match(LLAVE_IZQ);
 			setState(31);
 			sentencia();
 			setState(32);
-			match(RBRACE);
+			match(LLAVE_DER);
 			setState(38);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==ELSE) {
+			if (_la==SINO) {
 				{
 				setState(33);
-				match(ELSE);
+				match(SINO);
 				setState(34);
-				match(LBRACE);
+				match(LLAVE_IZQ);
 				setState(35);
 				sentencia();
 				setState(36);
-				match(RBRACE);
+				match(LLAVE_DER);
 				}
 			}
 
@@ -318,7 +318,7 @@ public class Tema39568Parser extends Parser {
 			setState(45);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case PRINTF:
+			case IMPRIMIR:
 				_localctx = new SalidaExprContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
@@ -327,7 +327,7 @@ public class Tema39568Parser extends Parser {
 				setState(42);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==PRINTF || _la==RETURN) {
+				if (_la==IMPRIMIR || _la==RETORNAR) {
 					{
 					setState(41);
 					sentencia();
@@ -336,7 +336,7 @@ public class Tema39568Parser extends Parser {
 
 				}
 				break;
-			case RETURN:
+			case RETORNAR:
 				_localctx = new TerminarExprContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
@@ -360,11 +360,11 @@ public class Tema39568Parser extends Parser {
 	}
 
 	public static class SalidaContext extends ParserRuleContext {
-		public TerminalNode PRINTF() { return getToken(Tema39568Parser.PRINTF, 0); }
-		public TerminalNode LPAREN() { return getToken(Tema39568Parser.LPAREN, 0); }
+		public TerminalNode IMPRIMIR() { return getToken(Tema39568Parser.IMPRIMIR, 0); }
+		public TerminalNode PARENTESIS_IZQ() { return getToken(Tema39568Parser.PARENTESIS_IZQ, 0); }
 		public TerminalNode CADENA() { return getToken(Tema39568Parser.CADENA, 0); }
-		public TerminalNode RPAREN() { return getToken(Tema39568Parser.RPAREN, 0); }
-		public TerminalNode SEMI() { return getToken(Tema39568Parser.SEMI, 0); }
+		public TerminalNode PARENTESIS_DER() { return getToken(Tema39568Parser.PARENTESIS_DER, 0); }
+		public TerminalNode PUNTO_COMA() { return getToken(Tema39568Parser.PUNTO_COMA, 0); }
 		public SalidaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -378,15 +378,15 @@ public class Tema39568Parser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(47);
-			match(PRINTF);
+			match(IMPRIMIR);
 			setState(48);
-			match(LPAREN);
+			match(PARENTESIS_IZQ);
 			setState(49);
 			match(CADENA);
 			setState(50);
-			match(RPAREN);
+			match(PARENTESIS_DER);
 			setState(51);
-			match(SEMI);
+			match(PUNTO_COMA);
 			}
 		}
 		catch (RecognitionException re) {
@@ -401,8 +401,8 @@ public class Tema39568Parser extends Parser {
 	}
 
 	public static class TerminarContext extends ParserRuleContext {
-		public TerminalNode RETURN() { return getToken(Tema39568Parser.RETURN, 0); }
-		public TerminalNode SEMI() { return getToken(Tema39568Parser.SEMI, 0); }
+		public TerminalNode RETORNAR() { return getToken(Tema39568Parser.RETORNAR, 0); }
+		public TerminalNode PUNTO_COMA() { return getToken(Tema39568Parser.PUNTO_COMA, 0); }
 		public TerminarContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -416,9 +416,9 @@ public class Tema39568Parser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(53);
-			match(RETURN);
+			match(RETORNAR);
 			setState(54);
-			match(SEMI);
+			match(PUNTO_COMA);
 			}
 		}
 		catch (RecognitionException re) {

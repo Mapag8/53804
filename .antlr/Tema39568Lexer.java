@@ -1,4 +1,4 @@
-// Generated from /home/mapag8/Escritorio/Compilador 53804/Tema39568.g4 by ANTLR 4.9.2
+// Generated from /home/mapag8/Escritorio/53804/Tema39568.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -16,8 +16,8 @@ public class Tema39568Lexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		IF=1, ELSE=2, PRINTF=3, RETURN=4, LPAREN=5, RPAREN=6, LBRACE=7, RBRACE=8, 
-		SEMI=9, CERO=10, UNO=11, CADENA=12, WS=13;
+		SI=1, SINO=2, IMPRIMIR=3, RETORNAR=4, PARENTESIS_IZQ=5, PARENTESIS_DER=6, 
+		LLAVE_IZQ=7, LLAVE_DER=8, PUNTO_COMA=9, CERO=10, UNO=11, CADENA=12, WS=13;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -28,8 +28,8 @@ public class Tema39568Lexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"IF", "ELSE", "PRINTF", "RETURN", "LPAREN", "RPAREN", "LBRACE", "RBRACE", 
-			"SEMI", "CERO", "UNO", "CADENA", "WS"
+			"SI", "SINO", "IMPRIMIR", "RETORNAR", "PARENTESIS_IZQ", "PARENTESIS_DER", 
+			"LLAVE_IZQ", "LLAVE_DER", "PUNTO_COMA", "CERO", "UNO", "CADENA", "WS"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -43,8 +43,8 @@ public class Tema39568Lexer extends Lexer {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "IF", "ELSE", "PRINTF", "RETURN", "LPAREN", "RPAREN", "LBRACE", 
-			"RBRACE", "SEMI", "CERO", "UNO", "CADENA", "WS"
+			null, "SI", "SINO", "IMPRIMIR", "RETORNAR", "PARENTESIS_IZQ", "PARENTESIS_DER", 
+			"LLAVE_IZQ", "LLAVE_DER", "PUNTO_COMA", "CERO", "UNO", "CADENA", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();

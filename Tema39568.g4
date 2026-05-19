@@ -4,27 +4,27 @@ grammar Tema39568;
 programa       : instrucciones EOF ;
 instrucciones  : instruccion+ ;
 instruccion    : decision ;
-decision       : IF LPAREN condicion RPAREN LBRACE sentencia RBRACE
-                 ( ELSE LBRACE sentencia RBRACE )? ;
+decision       : SI PARENTESIS_IZQ condicion PARENTESIS_DER LLAVE_IZQ sentencia LLAVE_DER
+                 ( SINO LLAVE_IZQ sentencia LLAVE_DER )? ;
 sentencia
     : salida sentencia?  #SalidaExpr
     | terminar           #TerminarExpr
     ;
-salida    : PRINTF LPAREN CADENA RPAREN SEMI ;
-terminar  : RETURN SEMI ;
+salida    : IMPRIMIR PARENTESIS_IZQ CADENA PARENTESIS_DER PUNTO_COMA ;
+terminar  : RETORNAR PUNTO_COMA ;
 condicion : CERO | UNO ;
 
 // Reglas del lexer
-IF     : 'if' ;
-ELSE   : 'else' ;
-PRINTF : 'printf' ;
-RETURN : 'return' ;
-LPAREN : '(' ;
-RPAREN : ')' ;
-LBRACE : '{' ;
-RBRACE : '}' ;
-SEMI   : ';' ;
-CERO   : '0' ;
-UNO    : '1' ;
-CADENA : '"' [a-zA-Z0-9.,!?:; ]* '"' ;
-WS     : [ \t\r\n]+ -> skip ;
+SI            : 'if' ;
+SINO          : 'else' ;
+IMPRIMIR      : 'printf' ;
+RETORNAR      : 'return' ;
+PARENTESIS_IZQ : '(' ;
+PARENTESIS_DER : ')' ;
+LLAVE_IZQ     : '{' ;
+LLAVE_DER     : '}' ;
+PUNTO_COMA    : ';' ;
+CERO          : '0' ;
+UNO           : '1' ;
+CADENA        : '"' [a-zA-Z0-9.,!?:; ]* '"' ;
+WS            : [ \t\r\n]+ -> skip ;
